@@ -1,0 +1,36 @@
+server:
+  port: 80
+  servlet:
+    context-path: /Shopme
+
+spring:
+  datasource:
+    password: vuphuoc123456
+    url: jdbc:mysql://localhost:3306/shopmedb
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    show-sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 348829161218-8sv2el47kd3nh5i6r38j8o66mnb3tico.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+          facebook:
+            client-id: 1681016308970442
+            client-secret: 9302f34bd5264d28d6c45d671919b735
+            scope:
+              - email
+              - public_profile
+  main:
+    allow-circular-references: true
